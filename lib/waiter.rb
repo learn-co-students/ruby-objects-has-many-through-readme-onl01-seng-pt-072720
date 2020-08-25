@@ -1,3 +1,5 @@
+require 'pry'
+
 class Waiter
 
   attr_accessor :name, :yrs_experience
@@ -34,10 +36,11 @@ class Waiter
     best_tipped_meal.customer
   end
   
-  def frequent_customer
-    all_customers = Customer.all.select {|customer| customer.waiter == self}
-    all_customers.max_by{|customer| all_customers.count(customer)}
-     
-  end
+  # def frequent_customer
+  #   all_customers = Customer.all.select {|customer| customer.waiter == self}
+  #   all_customers.max_by{|customer| all_customers.count(customer)}
+  # end
 
 end
+
+binding.pry
